@@ -1,0 +1,944 @@
+@font-face {
+    font-family: 'CursorGothic';
+    src: url('Assets/fonts/CursorGothic-main/fonts/CursorGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+}
+html,
+body {
+    background-color: #14120b;
+    color: rgb(255, 255, 255);
+    font-family: 'CursorGothic', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+}
+
+.logo-section-content,
+.logo-grid {
+    width: 100%;
+    max-width: 1300px;
+}
+
+/* navbar section */
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    height: 64px;
+    background-color: #14120b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+.nav-logo {
+    height: 24px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: rgb(237, 236, 236);
+    font-size: 14px;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    color: #ADB5B4;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sign-in-btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 3px 12px;
+    border: 1px solid #333;
+    border-radius: 50px;
+}
+.sign-in-btn:hover {
+    background-color: #1B1913;
+}
+.download-btn {
+    text-decoration: none;
+    background-color: #edecec;
+    color: rgb(20, 18, 11);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'CursorGothic', sans-serif;
+}
+.download-btn:hover {
+    background-color: #D7D6D5;
+}
+
+/* hero section */
+
+.hero {
+    height: auto;
+    width: 100%;
+    max-width: 1300px;
+    background-color: #14120b;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-family: 'CursorGothic', sans-serif;
+    margin: 180px auto 0 auto;
+    /* Height of navbar */
+    gap: 50px;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+.hero-content h1 {
+    color: rgb(237, 236, 236);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.25
+}
+.hero-content button {
+    background-color: #fff;
+    color: rgb(20, 18, 11);
+    padding: 12px 16px;
+    border-radius: 9999px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: opacity 0.2s ease;
+    line-height: 1;
+}
+.download-icon img {
+    height: 16px;
+    width: 16px;
+}
+.hero-image img {
+    height: 100%;
+    width: 100%;
+}
+
+/* logo-section */
+
+.logo-section {
+    width: 100%;
+    /* Full width for black background */
+    background-color: #14120b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center the inner content */
+    padding: 40px 0px 80px 0px;
+    gap: 20px;
+}
+.logo-section-content {
+    width: auto;
+}
+.logo-section-content p {
+    line-height: 1.5;
+    color: rgb(237, 236, 236);
+    font-size: 14px;
+    font-family: 'CursorGothic', sans-serif;
+    letter-spacing: 0.14;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    max-width: 1300px;
+    overflow-x: auto;
+    /* Adds horizontal scroll if screen is too narrow */
+    padding-bottom: 4px;
+    /* Space for scrollbar if it appears */
+}
+.logo-box {
+    width: 152px;
+    height: 100px;
+    background-color: #1b1913;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.logo-box:hover {
+    background-color: #1a1a1a;
+}
+.logo-box img {
+    max-width: 60%;
+    max-height: 45%;
+    filter: brightness(0) invert(1);
+    /* Ensure logos are white */
+    opacity: 0.8;
+}
+
+/* feature-section */
+
+.feature-section {
+    border-radius: 6px;
+    width: 1300px;
+    background-color: #1b1913;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.feature-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Text takes 1 part, image takes 2 parts */
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px 20px;
+    gap: 40px;
+    background-color: rgb(27, 25, 19);
+    transition: background-color 0.2s ease;
+}
+.feature-container:hover {
+    background-color: #1D1B15;
+    cursor: pointer;
+}
+.feature-container.reverse {
+    grid-template-columns: 2fr 1fr;
+}
+.feature-container.reverse .feature-text {
+    order: 2;
+}
+.feature-container.reverse .feature-visual {
+    order: 1;
+}
+.feature-text {
+    display: flex;
+    flex-direction: column;
+}
+.feature-text h2 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: rgb(237, 236, 236);
+    letter-spacing: -0.11px;
+    font-family: 'CursorGothic', sans-serif;
+}
+.feature-description {
+    font-size: 22px;
+    line-height: 1.3;
+    color: oklab(0.943853 0.00107113 0.000336707 / 0.6);
+    font-weight: 400;
+    font-family: 'CursorGothic', sans-serif;
+    margin-bottom: 4px;
+}
+.feature-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f54e00;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: 'CursorGothic', sans-serif;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+.feature-link:hover {
+    cursor: pointer;
+    color: #f54e00bf;
+}
+.feature-link span {
+    font-size: 20px;
+}
+.feature-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.feature-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* testimonial-section */
+
+.testimonial-section {
+    width: 100%;
+    background-color: #14120b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+.testimonial-heading {
+    font-size: 36px;
+    font-weight: 400;
+    color: rgb(237, 236, 236);
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'CursorGothic', sans-serif;
+    line-height: normal;
+    letter-spacing: normal;
+    line-height: 1.2;
+    letter-spacing: -0.72;
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 1300px;
+}
+.testimonial-card {
+    background-color: #1b1913;
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    transition: background-color 0.2s ease;
+    gap: 12px;
+}
+.testimonial-text {
+    color: rgb(237, 236, 236);
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    font-family: 'CursorGothic', sans-serif;
+    letter-spacing: 0.08px;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    font-size: 14px;
+    font-family: 'CursorGothic', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.14px;
+}
+.author-image {
+    width: 36px;
+    height: 36px;
+    border-radius: 12%;
+    object-fit: cover;
+}
+.author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    color: rgba(237, 236, 236, 0.6);
+}
+.author-name {
+    color: rgb(237, 236, 236);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'CursorGothic', sans-serif;
+}
+.author-title {
+    color: rgba(237, 236, 236, 0.6);
+    font-size: 13px;
+    margin: 0;
+    font-family: 'CursorGothic', sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.14px;
+}
+.testimonial-extra {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #2a2722;
+}
+.testimonial-extra p {
+    color: #d4d4d4;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 4px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.testimonial-handle {
+    color: #888;
+    font-size: 13px;
+    margin-top: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* usecases-section */
+
+.usecases-section {
+    background-color: #14120b;
+    color: #ffffff;
+    margin: 60px auto 0 auto;
+    width: 1300px;
+}
+.usecases-section-title {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 26px;
+    color: #ffffff;
+    letter-spacing: normal;
+    line-height: normal;
+}
+.usecases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.usecase-box {
+    background-color: #1b1913;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 380px;
+}
+.usecase-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.usecase-title {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.08px;
+    font-weight: 400;
+    font-family: 'CursorGothic', sans-serif;
+    font-style: normal;
+    color: rgb(237, 236, 236);
+    margin: 0;
+}
+.usecase-description {
+    font-family: 'CursorGothic', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    color: oklab(0.943853 0.00107113 0.000336707 / 0.6);
+    margin: 0;
+}
+.usecase-link {
+    color: rgba(245, 78, 0);
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+    transition: color 0.3s ease;
+}
+.usecase-link:hover {
+    color: #f54e00bf;
+}
+.usecase-link span {
+    font-size: 18px;
+}
+.usecase-image {
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.usecase-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* changelog-section */
+
+.changelog-section {
+    background-color: #14120b;
+    color: #ffffff;
+    padding: 140px 40px;
+}
+.changelog-container {
+    width: 1300px;
+    margin: 0 auto;
+}
+.changelog-title {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: -0.325px;
+    line-height: 1.25;
+}.changelog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.changelog-item {
+    background-color: #1b1913;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.changelog-header {
+    display: flex;
+    gap: 8px;
+}
+.changelog-version {
+    border: 1px solid oklab(0.943853 0.00107113 0.000336707 / 0.6);
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 13px;
+    color: oklab(0.943853 0.00107113 0.000336707 / 0.6);
+    width: fit-content;
+    font-family: 'CursorGothic', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.changelog-date {
+    font-size: 16px;
+    color: oklab(0.943853 0.00107113 0.000336707 / 0.6);
+    margin: 0;
+}
+.changelog-item-title {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.4;
+}
+.changelog-link {
+    color: #f54e00;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.changelog-link:hover {
+    color: #f54e00bf;
+}
+
+/* about-section */
+
+.about-section {
+    border-radius: 6px;
+    width: 1300px;
+    background-color: #1b1913;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;    
+}
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px 20px;
+    gap: 40px;
+    background-color: rgb(27, 25, 19);
+    transition: background-color 0.2s ease;
+}
+.about-container:hover {
+    background-color: #1D1B15;
+    cursor: pointer;
+}
+.about-content {
+    display: flex;
+    flex-direction: column;    
+}
+.about-title {
+    font-size: 22px;
+    font-weight: 300;   
+    line-height: 1.3;
+    color: rgb(237, 236, 236);   
+    margin: 0 0 16px 0;   
+    font-family: 'CursorGothic', sans-serif;
+    letter-spacing: -0.11px;
+}
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f54e00;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: 'CursorGothic', sans-serif;
+    line-height: 1.5;
+    letter-spacing: normal;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: none;
+    
+}
+.about-button:hover {
+    color: #f54e00bf;
+    background-color: transparent;
+}
+.about-button span {
+    font-size: 20px;
+    transition: none;
+}
+.about-button:hover span {
+    transform: none;
+   
+}
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0;    
+    overflow: visible;    
+}
+.about-image img {
+    position: static;    
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+/* highlights-section */
+
+.highlights-section {
+    background-color: #1b1913;
+    padding: 80px 20px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.highlights-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Using CSS Grid for outer container */
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto auto;
+    align-items: start;
+}
+
+.highlights-main-title {
+    font-family: 'CursorGothic', sans-serif;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(237, 236, 236);
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-top: 10px;
+}
+.highlights-content {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.highlight-item {
+    width: 700px;
+    background-color: #201e18;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 14px 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    display: flex;
+    flex-direction: column;
+}
+.highlight-item:hover {
+    background-color: #26241E;
+}
+.highlight-title {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'CursorGothic';
+    color: rgb(237, 236, 236);
+    margin: 0;
+    line-height: 1.5;
+}
+.highlight-description {
+    font-family: 'CursorGothic';
+    font-size: 16px;
+    font-weight: 400;
+    color: oklab(0.943853 0.00107113 0.000336707 / 0.6);
+    margin: 0;
+    line-height: 1.6;
+}
+.highlight-meta {
+    font-weight: 400;
+    font-family: 'CursorGothic';
+    font-size: 16px;
+    color: oklab(0.943853 0.00107113 0.000336707 / 0.6);
+    margin: 0;
+    margin-top: 20px;
+}
+.highlights-view-more {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f54e00;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 20px;
+}
+.highlights-view-more:hover {
+    color: #f54e00bf;
+}
+
+/* final-cta-section */
+
+.final-cta-section {
+    background-color: #14120b;
+    padding: 120px 20px;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.final-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+}
+.final-cta-title {
+    font-family: 'CursorGothic', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -1.28;
+}
+.final-cta-button {
+    background-color: #ffffff;
+    color: rgb(20, 18, 11);
+    font-family: 'CursorGothic', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.final-cta-button:hover {
+    background-color: #D7D6D5;
+}
+.download-icon-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+}
+.download-icon-cta img {
+    width: 100%;
+    height: 100%;
+}
+
+/* footer-section */
+
+.footer-section {
+    background-color: #1b1913;
+    padding: 60px 20px 40px;
+    color: #ffffff;
+    width: 100%;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+    margin-bottom: 60px;
+}
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-column-title {
+    font-family: 'CursorGothic', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(237, 236, 236, 0.6);
+    margin: 0;
+    margin-bottom: 4px;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: rgb(237, 236, 236);
+    font-family: 'CursorGothic', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.14;
+}
+.footer-links li {
+    margin: 0;
+}
+.footer-links a {
+    font-family: 'CursorGothic', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(237, 236, 236);
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: #d0d0d0;
+}
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-copyright,
+.footer-certification {
+    font-family: 'CursorGothic', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.14;
+    line-height: 1.5;
+    color: oklab(0.943853 0.00107113 0.000336707 / 0.6);
+}
+.footer-bottom-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+.footer-theme-toggle {
+    display: flex;
+    align-items: center;
+    background-color: #26241e;
+    padding: 3px;
+    border-radius: 20px;
+    gap: 8px;
+}
+.footer-icon-btn {
+    background: transparent;
+    border: none;
+    color: #6b6b6b;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+.footer-icon-btn:hover {
+    color: #a1a1a1;
+}
+.footer-icon-btn.active {
+    background-color: #3A3833;
+    color: #e0e0e0;
+}
+.footer-language-btn {
+    background: #26241e;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'CursorGothic', sans-serif;
+    font-size: 13px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+.footer-language-btn:hover {
+    background-color: #2B2923;
+}
+.footer-language-btn svg {
+    color: #6b6b6b;
+}
+.footer-language-btn:hover svg {
+    color: #a1a1a1;
+}
+.footer-world-icon {
+    font-size: 16px;
+}
